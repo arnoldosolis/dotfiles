@@ -8,6 +8,7 @@
 alias ls='ls --color=auto'
 alias vi='nvim'
 alias enw='emacs -nw'
+alias gupdate='sudo pacman -Syu'
 
 export PATH="~/.emacs.d/bin:$PATH"
 

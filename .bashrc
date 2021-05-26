@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias lsa='ls -al'
 alias vi='nvim'
 alias enw='emacs -nw'
 alias gupdate='sudo pacman -Syu'

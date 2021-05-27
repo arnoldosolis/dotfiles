@@ -48,4 +48,31 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-exec i3
+# i3 WM
+# exec i3
+
+# Display Configuration
+/home/zero/.screenlayout/layout.sh &
+
+# Picom Compositor
+picom -f &
+
+# Wallpaper
+nitrogen --restore &
+
+# Retart
+while true; do
+	dwm >/dev/null 2>&1
+done
+
+# Execute Dynamic Window Manager
+exec dwm
+
+
+
+
+
+
+
+
+

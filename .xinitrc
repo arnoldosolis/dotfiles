@@ -51,6 +51,9 @@ fi
 # i3 WM
 # exec i3
 
+# DWM status bar
+/home/zero/dwm-bar/dwm_bar.sh &
+
 # Display Configuration
 /home/zero/.screenlayout/layout.sh &
 

@@ -14,9 +14,15 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 
+" nerdtree is a file manager
+" vim-devicons is icons for nerdtree 
+" nerdtree-git-plugin shows git status (Del) 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'bling/vim-airline'
 call plug#end()
 
 colorscheme gruvbox
@@ -187,3 +193,11 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Nerd Tree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+

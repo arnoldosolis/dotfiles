@@ -8,6 +8,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/zero/.oh-my-zsh"
@@ -107,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vi="vim"
+alias v="vim"
 alias enw="emacs -nw"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

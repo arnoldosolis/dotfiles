@@ -1,10 +1,12 @@
-syntax on
+"syntax on "Not needed as vim-polyglot takes care of this
+set nocompatible
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+"set tabstop=4 softtabstop=4
+"set shiftwidth=4
 set expandtab
 set smartindent
 set number
+set signcolumn=yes
 set nowrap
 set smartcase
 set noswapfile
@@ -13,22 +15,41 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 
+" Stops the autoindent feature in polyglot
+" let g:polyglot_disabled = ['autoindent']
+
 call plug#begin('~/.vim/plugged')
+"""""Themes"""""
 Plug 'morhetz/gruvbox'
-Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive'
-Plug 'leafgarland/typescript-vim'
-Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags'
-Plug 'git@github.com:kien/ctrlp.vim.git'
-Plug 'git@github.com:Valloric/YouCompleteMe.git'
-Plug 'mbbill/undotree'
+Plug 'tomasiser/vim-code-dark'
+Plug 'joshdick/onedark.vim'
+"""""Code Completion"""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"""""File explorer+"""""
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+"""""git"""""
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+"""""Language Pack(Syntax and indentations support)"""""
+Plug 'sheerun/vim-polyglot'
+"""""Web Development Plugins"""
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'alvan/vim-closetag'
+""""""""""""""""""""""""""""""""
 call plug#end()
 
-colorscheme gruvbox
-set background=dark
+"""""Themes"""""
+colorscheme codedark
+let g:airline_theme = 'codedark'
 
+"colorscheme onedark
+"set background=dark
+
+"""""CoC --> Conquer of Completion"""""
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
@@ -194,4 +215,60 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+""""""""""""""""""""NERDTree Plugin""""""""""""""""""""
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
+
+""""""""""""""""""""Close Tag plugin""""""""""""""""""""
+"filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+
+" filenames like *.xml, *.xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
+
+" filetypes like xml, html, xhtml, ...
+" These are the file types where this plugin is enabled.
+"
+let g:closetag_filetypes = 'html,xhtml,phtml,javascript,javascriptreact'
+
+" filetypes like xml, xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filetypes = 'xhtml,jsx,js'
+
+" integer value [0|1]
+" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+"
+let g:closetag_emptyTags_caseSensitive = 1
+
+" dict
+" Disables auto-close if not in a "valid" region (based on filetype)
+"
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ 'typescriptreact': 'jsxRegion,tsxRegion',
+    \ 'javascriptreact': 'jsxRegion',
+    \ }
+
+" Shortcut for closing tags, default is '>'
+"
+let g:closetag_shortcut = '>'
+
+" Add > at current position without closing the current tag, default is ''
+"
+let g:closetag_close_shortcut = '<leader>>'
 

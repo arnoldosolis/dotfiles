@@ -14,6 +14,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+"""""Makes tabs clickable"""""
+set mouse=a
 
 " Stops the autoindent feature in polyglot
 " let g:polyglot_disabled = ['autoindent']
@@ -25,6 +27,11 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'joshdick/onedark.vim'
 """""Code Completion"""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
+" Ultisnips
+Plug 'SirVer/ultisnips'
+" React code snippets
+Plug 'epilande/vim-react-snippets'
 """""File explorer+"""""
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -42,9 +49,15 @@ Plug 'alvan/vim-closetag'
 """"""""""""""""""""""""""""""""
 call plug#end()
 
+"""""NerdTree(Quits when new file is tab opened"""""
+let NERDTreeQuitOnOpen=1
+
+"""""Ultisnips"""""
+let g:UltiSnipsExpandTrigger="<C-l>"
+
 """""Themes"""""
-colorscheme codedark
-let g:airline_theme = 'codedark'
+"colorscheme codedark
+"let g:airline_theme = 'codedark'
 
 "colorscheme onedark
 "set background=dark

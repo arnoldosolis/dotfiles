@@ -1,6 +1,5 @@
 {
 	"prettier.eslintIntegration": true,
 	"prettier.tslintIntegration": true,
-	"coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "javascript", "javascriptreact"],
-	"graphql.filetypes": ["typescript"]
+	"coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "javascript", "javascriptreact"]
 }

@@ -17,11 +17,13 @@ Plug 'ryanoasis/vim-devicons'
 "Plug 'ianks/vim-tsx'             "
 """""""""""""""""""""""""""""""""""
 """Javascript"""
-Plug 'pangloss/vim-javascript'    
-Plug 'mxw/vim-jsx'
+"Plug 'pangloss/vim-javascript'    
+"Plug 'mxw/vim-jsx'
+
 """""Code Completion"""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-clangd', 'coc-eslint', 'coc-html-css-support', 'coc-python', 'coc-sql']
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'alvan/vim-closetag'
 
 """""Status/Tabline for vim"""""
@@ -40,7 +42,7 @@ call plug#end()
 set t_Co=256
 syntax on
 colorscheme dracula
-
+set mouse=a
 """Nerd Tree"""
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
@@ -233,3 +235,31 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 """Code Completion"""
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+    highlight = {
+        enable = true,
+        disable = {},
+        },
+    indent = {
+        enable = false,
+        disable = {},
+        },
+ensure_installed = {
+    "tsx",
+    "toml",
+    "json",
+    "yaml",
+    "html",
+    "scss",
+    "css",
+    "javascript",
+    "cpp",
+    "c",
+    "python",
+    "go"
+    }
+}
+EOF
+

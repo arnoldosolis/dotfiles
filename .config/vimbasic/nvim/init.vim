@@ -19,11 +19,11 @@ Plug 'ryanoasis/vim-devicons'
 """Javascript"""
 "Plug 'pangloss/vim-javascript'    
 "Plug 'mxw/vim-jsx'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 """""Code Completion"""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-clangd', 'coc-eslint', 'coc-html-css-support', 'coc-python', 'coc-sql']
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'alvan/vim-closetag'
 
 """""Status/Tabline for vim"""""

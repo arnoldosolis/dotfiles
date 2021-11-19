@@ -5,7 +5,8 @@ set mouse=a
 set nu
 set guicursor=
 """Theme"""
-colorscheme dracula
+"colorscheme dracula
+colorscheme onedark
 ]])
 
 require 'nvim-treesitter.configs'.setup {

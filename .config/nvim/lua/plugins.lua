@@ -6,20 +6,17 @@ call plug#begin('~/.vim/plugged')
 """""Coloscheme"""""
 Plug 'dikiaap/minimalist'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joshdick/onedark.vim'
 
 """""File Navigator"""""
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 """""Syntax Highlighting"""""""""""
-"""Typescript""""""""""""""""""""""
-"Plug 'leafgarland/typescript-vim'"
-"Plug 'ianks/vim-tsx'             "
-"""""""""""""""""""""""""""""""""""
-"""Javascript"""
-"Plug 'pangloss/vim-javascript'    
-"Plug 'mxw/vim-jsx'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 """""Code Completion"""""

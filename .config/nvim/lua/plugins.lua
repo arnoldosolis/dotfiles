@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'dikiaap/minimalist'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'joshdick/onedark.vim'
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
 """""File Navigator"""""
 Plug 'preservim/nerdtree'

@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 wmname LG3D &
-$HOME/.config/polybar/launch.sh --cuts
+$HOME/.config/polybar/launch.sh --shades
 
 
 bspc monitor -d I II III IV V VI VII VIII IX X

@@ -21,6 +21,9 @@ if (has("termguicolors"))
     hi LineNr ctermbg=NONE guibg=NONE
 endif
 
+" Trigger configuration (Optional)
+let g:UltiSnipsExpandTrigger="<C-l>"
+
 ]])
 
 require 'nvim-treesitter.configs'.setup {

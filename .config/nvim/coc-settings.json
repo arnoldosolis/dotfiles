@@ -1,6 +1,16 @@
 {
-        "prettier.eslintIntegration": true,
-        "prettier.tslintIntegration": true,
-        "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "javascript", "javascriptreact"]
+  "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": false,
+  "diagnostic.errorSign": "✖",
+  "diagnostic.warningSign": "⚑",
+  "diagnostic.infoSign": "⚑",
+  "diagnostic.hintSign": "⚑",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json"
+  ]
 }
-

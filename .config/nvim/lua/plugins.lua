@@ -23,7 +23,10 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 """""Code Completion"""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-clangd', 'coc-eslint', 'coc-html-css-support', 'coc-python', 'coc-sql', 'coc-rome']
-Plug 'alvan/vim-closetag'
+
+"""Code Snippet"""
+Plug 'SirVer/ultisnips'
+Plug 'epilande/vim-react-snippets'
 
 """""Status/Tabline for vim"""""
 Plug 'vim-airline/vim-airline'

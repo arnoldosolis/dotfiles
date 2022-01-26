@@ -19,10 +19,12 @@ Plug 'nvim-telescope/telescope.nvim'
 
 """""Syntax Highlighting"""""""""""
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'pantharshit00/vim-prisma'
+Plug 'jparise/vim-graphql'
 
 """""Code Completion"""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-clangd', 'coc-eslint', 'coc-html-css-support', 'coc-python', 'coc-sql', 'coc-rome']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-clangd', 'coc-eslint', 'coc-html-css-support', 'coc-python', 'coc-sql', 'coc-rome', 'coc-graphql', 'coc-prisma']
 
 """Code Snippet"""
 Plug 'SirVer/ultisnips'

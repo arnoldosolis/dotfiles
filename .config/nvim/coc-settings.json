@@ -1,16 +1,19 @@
 {
-  "prettier.eslintIntegration": true,
-  "prettier.tslintIntegration": false,
+  "prettier.eslintIntegration": false,
+  "prettier.tslintIntegration": true,
+  "graphql.debug": true,
   "diagnostic.errorSign": "✖",
   "diagnostic.warningSign": "⚑",
   "diagnostic.infoSign": "⚑",
   "diagnostic.hintSign": "⚑",
   "coc.preferences.formatOnSaveFiletypes": [
+    "prisma",
     "markdown",
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
+    "reason",
     "json"
   ]
 }

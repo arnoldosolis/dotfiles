@@ -4,7 +4,7 @@ syntax on
 set mouse=a
 set nu
 set guicursor=
-set shiftwidth=4
+set shiftwidth=2
 """Theme"""
 "colorscheme dracula
 "colorscheme onedark
